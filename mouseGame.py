@@ -133,6 +133,8 @@ def show_game():
     music_index = [0]  # Mutable for nested function
 
     pygame.mixer.init()
+    pygame.mixer.music.set_volume(0.3)  # Set default volume to 30%
+    music_volume = [0.3]  # Mutable for nested function
 
     def play_next_music():
         if not music_files:
@@ -140,6 +142,7 @@ def show_game():
         try:
             pygame.mixer.music.load(music_files[music_index[0]])
             pygame.mixer.music.play()
+            pygame.mixer.music.set_volume(music_volume[0])
         except Exception as e:
             print(f"Error playing music: {e}")
         music_index[0] = (music_index[0] + 1) % len(music_files)
@@ -242,6 +245,20 @@ def show_game():
         if (now - last_spawn_time) * 1000 >= circle_spawn_interval:
             spawn_circle()
             last_spawn_time = now
+
+        # --- VOLUME CONTROL ---
+        if keyboard.is_pressed("up"):
+            if music_volume[0] < 1.0:
+                music_volume[0] = min(1.0, music_volume[0] + 0.1)
+                pygame.mixer.music.set_volume(music_volume[0])
+                print(f"Music volume: {int(music_volume[0]*100)}%")
+                time.sleep(0.15)  # Prevent rapid repeat
+        if keyboard.is_pressed("down"):
+            if music_volume[0] > 0.0:
+                music_volume[0] = max(0.0, music_volume[0] - 0.1)
+                pygame.mixer.music.set_volume(music_volume[0])
+                print(f"Music volume: {int(music_volume[0]*100)}%")
+                time.sleep(0.15)  # Prevent rapid repeat
 
         # Stop animation after duration
         text = f"Level {level}"
