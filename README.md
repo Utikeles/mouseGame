@@ -8,10 +8,10 @@ pip is a prerequisite. If you don't know what this is or how to install it, plea
 
 to install, download the mouseGame folder.
 
-open your CMD prompt, change directory to the mouseGame folder, and install the requirements.
+open your CMD prompt, git clone the repo, change directory to the mouseGame folder, and install the requirements.
 
 ```
-git clone https://github.com/Utikeles/mouseGame/tree/main
+git clone https://github.com/Utikeles/mouseGame
 cd mouseGame
 pip install -r requirements.txt
 ```
