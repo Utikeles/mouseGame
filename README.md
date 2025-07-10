@@ -11,7 +11,8 @@ to install, download the mouseGame folder.
 open your CMD prompt, change directory to the mouseGame folder, and install the requirements.
 
 ```
-cd {wherever you put the mouseGame folder}
+git clone https://github.com/Utikeles/mouseGame/tree/main
+cd mouseGame
 pip install -r requirements.txt
 ```
 
