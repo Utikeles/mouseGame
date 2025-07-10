@@ -6,6 +6,12 @@ Keep music in the "music" folder, or remove it. Or add your own! Just make sure 
 
 pip is a prerequisite. If you don't know what this is or how to install it, please refer to their documentation: https://pip.pypa.io/en/stable/installation/
 
+git is optional, but the easiest way to install this game. To install git:
+```
+scoop install git
+```
+If you don't have scoop, refer to their documentation: https://scoop.sh/
+
 to install, download the mouseGame folder.
 
 open your CMD prompt, git clone the repo, change directory to the mouseGame folder, and install the requirements.
