@@ -39,6 +39,11 @@ def releaseCursor():
     user32.ClipCursor(None)
 '''
 
+def clipCursor(x):
+    pass
+def releaseCursor():
+    pass
+
 # --- MENU LOGIC ---
 def show_menu():
     menu_root = tk.Tk()
