@@ -112,7 +112,7 @@ def show_game():
     x2 = int(centerX + leeway)
     y2 = int(centerY + leeway)
 
-    confineRect = RECT(left=x1, top=y1, right=x2, bottom=y2)
+    # confineRect = RECT(left=x1, top=y1, right=x2, bottom=y2)
 
     # Level system variables
     level = 1
