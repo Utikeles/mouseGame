@@ -11,8 +11,8 @@ import pygame
 pyautogui.FAILSAFE = False
 
 # Define Windows API
-user32 = ctypes.WinDLL('user32', use_last_error=True)
-
+# user32 = ctypes.WinDLL('user32', use_last_error=True)
+'''
 class RECT(ctypes.Structure):
     _fields_ = [
         ('left', ctypes.c_long),
@@ -20,6 +20,7 @@ class RECT(ctypes.Structure):
         ('right', ctypes.c_long),
         ('bottom', ctypes.c_long),
     ]
+'''
 
 def load_music():
     file_list = []
@@ -30,12 +31,13 @@ def load_music():
             if filename.lower().endswith('.mp3'):
                 file_list.append(os.path.join(music_folder, filename))
     return file_list
-
+'''
 def clipCursor(rect):
     user32.ClipCursor(ctypes.byref(rect))
 
 def releaseCursor():
     user32.ClipCursor(None)
+'''
 
 # --- MENU LOGIC ---
 def show_menu():
